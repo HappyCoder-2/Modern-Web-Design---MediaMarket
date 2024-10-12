@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Media Market</title>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="logo"><img class="logo-img" src="images/MMS_Logo_outline.svg" alt=""></div>
+
+        <div class="burger-menu">
+            <div id="open-burger" class="burger-icon" onclick="openBurger()"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></div>
+            <div class="burger-text">All Categories</div>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-icon"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+            <div class="input-bar"><input type="text" placeholder="What are you looking for?" ></div>
+            <div class="del-icon"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></div>
+        </div>
+
+        <div class="market-selection">
+           
+            <div class="text-part">
+                <div class="select-text">My Market</div>
+                <div class="sub-text">No Market Selected</div>
+            </div>
+
+            <div onclick="openStore()" id="arrow-down" class="icon-part"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="circle-icons">
+            <div id="sign-in-open" onclick="openSignIn()" class="sign-in-icon"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg></div>
+            <div class="cart-icon"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></div>
+        </div>
+
+    </div>
+
+    <div class="sub-nav-bar">
+        <div class="text-1">Exclusive app coupons</div>
+        <div class="text-1">Collect points</div>
+        <div class="text-2">Standard shipping from 59 € free</div>
+    </div>
+
+    <div class="title-page">
+        <div class="part-h1">Outlet Large Household Appliances</div>
+        <div class="part-menu-down">
+            <select id="dropdown" name="options">
+                <option value="option1">Best results</option>
+                <option value="option2">Price: ascending</option>
+                <option value="option3">Price: descending</option>
+                <option value="option4">Reviews</option>
+                <option value="option5">Top sellers</option>
+                <option value="option6">News</option>
+                <option value="option7">Availability</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="side-bar">
+        <div class="item-sb">
+            <div class="part-title">Category</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+      
+        <div class="item-sb">
+            <div class="part-title">Market</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Price</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Availability</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Customer review</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Actions</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Color</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Material</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+
+        <div class="item-sb">
+            <div class="part-title">Price discount</div>
+            <div class="part-arrow"><svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></div>
+        </div>
+        
+    </div>
+
+    <div class="product-card">
+
+        <div class="btn-part">
+            <div class="btn-CTA">Free shipping</div>
+            <div class="btn-CTA">OUTLET%</div>
+        </div>
+
+        <div class="title-part">AEG A9WHMIC1 microplastic filter (176 mm)</div>
+
+        <div class="product-info-part">
+
+            <div class="img-part"><img class="product-image" src="images/img-1.webp" alt=""></div>
+
+            <div class="product-description-part-1">
+                <div class="product-sub-title">Product type</div>
+                <div class="product-title">Microplastic filter</div>
+
+                <div class="product-sub-title">Scope of delivery</div>
+                <div class="product-title">Microplastic filter, connecting hose, 2x filter</div>
+
+                <div class="product-sub-title">Color (according to manufacturer)</div>
+                <div class="product-title">White</div>
+
+                <div class="product-sub-title">Weight (according to manufacturer)</div>
+                <div class="product-title">1.49kg</div>
+            </div>
+
+            <div class="product-price-part">
+                <div class="discount-part">-63%</div>
+
+                <div class="price-part">66,00 &#8364;</div>
+
+                <div class="vat-part">incl.VAT, free shipping</div>
+
+                <div class="delivery-part">
+                    <div class="delivery-1">&#8226; Home delivery</div>
+                    <div class="delivery-2">Delivery 17.09.2024 - 18.09.2024</div>
+                </div>
+
+                <div class="pickup-part">
+                    <div class="pickup-1">&#8226; Pick up</div>
+                    <div class="pickup-2">Please select a market</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stars-part">&star;&star;&star;&star;&star; <span class="info-sign">&#8505;</span> <span class="tooltip-text">The average rating is based on all available product reviews. Reviews from external sources are also taken into account (e.g. from the manufacturer's website or other online shops that belong to our group of companies). Verified reviews are marked with the note "verified".</span></div>
+
+        <div class="footer-product-card">
+            <div class="comparison-part">
+                <div class="square-part"></div>
+                <div class="compare-part">Compare</div>
+            </div>
+
+            <div class="cart-like-part">
+                <div class="cart-part">
+                    <div class="cart-img"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></div>
+                    <div class="cart-text">Add to Cart</div>
+                </div>
+                <div class="like-part">&#9825;</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="store-search" class="online-store-container">
+        
+        <div class="intro-store-selection">
+            <div class="store-title">Select a Store</div>
+            <div onclick="closeStore()" class="close-store"><svg width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg></div>
+        </div>
+
+        <div class="descript-store">Please enter your postcode or city to display stores near you. This will allow you to check product availability in the store.</div>
+
+        <div class="input-container">
+            
+            <div class="part-input-store">
+                <div class="search-image"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+                <div class="input-store"><input class="input-store-width" type="text" placeholder="Postcode / City"></div>
+                <div class="delete-store"><svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></div>
+            </div>
+            
+            <div class="btn-search"><button class="search-btn">Search</button></div>
+
+        </div>
+
+        <div class="empty-part">This is an empty part</div>
+
+        <div class="decoration-line"></div>
+
+        <div class="store-selection-btn"><button class="select-CTA">Select a store</button></div>
+
+
+    </div>
+
+    <div id="all-categ-cont" class="all-categories-part">
+        
+        <div class="logo-exit-part">
+            <div class="logo-part"><img class="logo-categories-part" src="images/MMS_Logo_outline.svg" alt=""></div>
+            <div id="close-all" class="exit-part" onclick="closeAll()"><svg width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg></div>
+        </div>
+
+        <div class="decoration-line"></div>
+
+        <div class="categ-title">All Categories</div>
+
+        <div class="categories-container">
+            <div id="hover-element" class="categories-sub-container">
+                <div class="text-section">Offers & Promotions</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-2" class="categories-sub-container">
+                <div class="text-section">OUTLET%</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-3" class="categories-sub-container">
+                <div class="text-section">Computer & Office</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-4" class="categories-sub-container">
+                <div class="text-section">TV & Audio</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-5" class="categories-sub-container">
+                <div class="text-section">Smartphones</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-6" class="categories-sub-container">
+                <div class="text-section">Large Household Appliances</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-7" class="categories-sub-container">
+                <div class="text-section">Household & Living</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-8" class="categories-sub-container">
+                <div class="text-section">Gaming & VR</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-9" class="categories-sub-container">
+                <div class="text-section">Photo & Drones</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-10" class="categories-sub-container">
+                <div class="text-section">Health & Personal Care</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-11" class="categories-sub-container">
+                <div class="text-section">Film & Music</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-12" class="categories-sub-container">
+                <div class="text-section">Sports & Leisure</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-13" class="categories-sub-container">
+                <div class="text-section">SmartHome</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-14" class="categories-sub-container">
+                <div class="text-section">DIY & Garden</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-15" class="categories-sub-container">
+                <div class="text-section">Toys & Baby</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-16" class="categories-sub-container">
+                <div class="text-section">Renewable Energy</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-17" class="categories-sub-container">
+                <div class="text-section">Refurbished</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-18" class="categories-sub-container">
+                <div class="text-section">Business Customers</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-19" class="categories-sub-container">
+                <div class="text-section">Magazines</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-20" class="categories-sub-container">
+                <div class="text-section">AI World</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-21" class="categories-sub-container">
+                <div class="text-section">Services</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+            <div id="hover-element-22" class="categories-sub-container">
+                <div class="text-section">myMediaMarket</div>
+                <div class="arrow-section"><svg width="6px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"/></svg></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="hover-content" class="cont-categ-spec">
+
+        <div class="offers-title">All Offers & Promotions</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Offers & Promotions</div>
+                <div class="column-content">
+                    <p class="content-1">Computer & Office</p>
+                    <p class="content-1">TV & Audio</p>
+                    <p class="content-1">Smartphone</p>
+                    <p class="content-1">Large Household Appliances</p>
+                    <p class="content-1">Household & Living</p>
+                    <p class="content-1">Gaming & VR</p>
+                    <p class="content-1">Photo & Drones</p>
+                    <p class="content-1">Health & Personal Care</p>
+                    <p class="content-1">Film & Music</p>
+                    <p class="content-1">Sports & Leisure</p>
+                    <p class="content-1">SmartHome</p>
+                    <p class="content-1">DIY & Garden</p>
+                    <p class="content-1">Toys & Baby</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-content">
+                    <p class="content-2">Crazy Fast Sale</p>
+                    <p class="content-2">Samsung Galaxy Top Deals</p>
+                    <p class="content-2">Grover Rental Deals</p>
+                    <p class="content-2">Black Friday 2024</p>
+                </div>
+                
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Theme worlds</div>
+                <div class="column-content">
+                    <p class="content-3">Gaming</p>
+                    <p class="content-3">E-Power & Power Generation</p>
+                    <p class="content-3">Coffee Enjoyment</p>
+                    <p class="content-3">Babies & Children</p>
+                    <p class="content-3">Mobile Phones & Gadgets</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-2" class="cont-categ-spec">
+
+        <div class="offers-title">OUTLET%</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">OUTLET%</div>
+                <div class="column-content">
+                    <p class="content-1">Computer & Office</p>
+                    <p class="content-1">TV & Audio</p>
+                    <p class="content-1">Smartphone & Accessories</p>
+                    <p class="content-1">Large Household Appliances</p>
+                    <p class="content-1">Household & Living</p>
+                    <p class="content-1">Gaming & VR</p>
+                    <p class="content-1">Photo & Drones</p>
+                    <p class="content-1">Health & Personal Care</p>
+                    <p class="content-1">Film & Music</p>
+                    <p class="content-1">SmartHome</p>
+                    <p class="content-1">Toys & Baby</p>
+                    <p class="content-1">Sports & Leisure</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-content">
+                    <p class="content-2">Market treasure trove</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Refurbished</div>
+                <div class="column-content">
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-3" class="cont-categ-spec">
+
+        <div class="offers-title">Computer & Office</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Laptops & Notebooks</div>
+                <div class="column-content">
+                    <p class="content-1">Apple MacBook</p>
+                    <p class="content-1">Apple MacBook Accessories</p>
+                    <p class="content-1">Convertible Notebooks</p>
+                    <p class="content-1">Chromebooks</p>
+                    <p class="content-1">Copilot + PCs</p> <br>
+                    <p class="content-2">Tablets</p>
+                    <p class="content-1">Apple iPad</p>
+                    <p class="content-1">Apple iPad Accessories</p>
+                    <p class="content-1">Android Tablets</p> <br>
+                    <p class="content-2">PCs</p>
+                    <p class="content-1">All-in-One-PCs</p>
+                    <p class="content-1">Apple iMac</p>
+                    <p class="content-1">Mini PCs</p> <br>
+                    <p class="content-2">Monitors</p>
+                    <p class="content-1">Monitors up to 24 inches</p>
+                    <p class="content-1">Monitors up to 27 inches</p>
+                    <p class="content-1">Monitors up to 32 inches</p>
+                    <p class="content-1">4K monitors</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-content">
+                    <p class="content-2">Gaming & Gaming Accessories</p>
+                    <p class="content-1">Gaming PCs</p>
+                    <p class="content-1">Gaming Laptops</p>
+                    <p class="content-1">Gaming Monitors</p>
+                    <p class="content-1">Gaming Headsets</p>
+                    <p class="content-1">Gaming Gift Cards</p> <br>
+                    <p class="content-2">Printers & scanners</p>
+                    <p class="content-1">Multifunctional printers</p>
+                    <p class="content-1">Laser printers</p>
+                    <p class="content-1">Inkjet printers</p>
+                    <p class="content-1">Toner cartridges</p>
+                    <p class="content-1">Printer cartridges</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">PC components</div>
+                <div class="column-content">
+                    <p class="content-3">Graphics cards</p>
+                    <p class="content-3">Processors / CPU</p>
+                </div>
+
+                <div class="column-title">Network components</div>
+                <div class="column-content">
+                    <p class="content-3">WLAN routers</p>
+                    <p class="content-3">WLAN amplifiers & repeaters</p>
+                </div>
+
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">Software</p>
+                    <p class="content-3">Landline telephones & accessories</p>
+                    <p class="content-3">Office equipment</p>
+                    <p class="content-3">DSL & Internet</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-4" class="cont-categ-spec">
+
+        <div class="offers-title">TV & Audio</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">TVs</div>
+                <div class="column-content">
+                    <p class="content-3">OLED TVs</p>
+                    <p class="content-3">QLED TVs</p>
+                    <p class="content-3">LED & LCD TVs</p>
+                    <p class="content-3">Smart TVs</p>
+                    <p class="content-3">4K TVs</p>
+                    <p class="content-3">43 inch TVs</p>
+                    <p class="content-3">55 inch TVs</p>
+                    <p class="content-3">65 inch TVs</p>
+                    <p class="content-3">75 inch TVs</p>
+                    <p class="content-3">Gaming TVs</p>
+                </div>
+
+                <div class="column-title">Home theater systems</div>
+                <div class="column-content">
+                    <p class="content-3">Soundbars</p>
+                    <p class="content-3">5.1 systems</p>
+                    <p class="content-3">Subwoofer</p>
+                </div>
+
+                <div class="column-title">Speakers</div>
+                <div class="column-content">
+                    <p class="content-3">Bluetooth speakers</p>
+                    <p class="content-3">WiFi speakers</p>
+                    <p class="content-3">Party boxes</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Headphones</div>
+                <div class="column-content">
+                    <p class="content-3">Over-ear headphones</p>
+                    <p class="content-3">Bluetooth headphones</p>
+                    <p class="content-3">Apple AirPods</p>
+                    <p class="content-3">Samsung Galaxy Buds</p>
+                </div>
+
+                <div class="column-title">HiFi components & systems</div>
+                <div class="column-content">
+                    <p class="content-3">Compact systems & audio systems</p>
+                    <p class="content-3">AV receivers</p>
+                    <p class="content-3">Record players</p>
+                </div>
+
+                <div class="column-title">Satellite dishes</div>
+                <div class="column-content">
+                    <p class="content-3">Receiver</p>
+                    <p class="content-3">Antenna cables</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">TV & wall mounts</p>
+                    <p class="content-3">Networks & CI modules</p>
+                    <p class="content-3">Car Hifi</p>
+                    <p class="content-3">DJ equipment & musical instruments</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-5" class="cont-categ-spec">
+
+        <div class="offers-title">Smartphones</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Cell phones without a contract</div>
+                <div class="column-content">
+                    <p class="content-3">Apple iPhone</p>
+                    <p class="content-3">Samsung Galaxy</p>
+                    <p class="content-3">Samsung Galaxy AI</p>
+                    <p class="content-3">Xiaomi</p>
+                    <p class="content-3">Google Pixel</p>
+                    <p class="content-3">Sony Xperia</p>
+                    <p class="content-3">Huawei</p>
+                    <p class="content-3">Cell phones</p>
+                    <p class="content-3">Other smartphones</p>
+                </div>
+
+                <div class="column-title">Tariff world</div>
+                <div class="column-content">
+                    <p class="content-3">Mobile phone with contract</p>
+                    <p class="content-3">Media Markt Super Select</p>
+                    <p class="content-3">Media Markt o2 tariff world</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Wearables</div>
+                <div class="column-content">
+                    <p class="content-3">Smartwatches</p>
+                    <p class="content-3">Fitness trackers</p>
+                    <p class="content-3">Galaxy Ring</p>
+                    <p class="content-3">Samsung Galaxy Watch</p>
+                    <p class="content-3">Apple Watch</p>
+                    <p class="content-3">Apple Watch accessories</p>
+                    <p class="content-3">Other wearables & accessories</p>
+                </div>
+
+                <div class="column-title">Smartphone & mobile phone accessories</div>
+                <div class="column-content">
+                    <p class="content-3">Mobile phone cases</p>
+                    <p class="content-3">Chargers and cables</p>
+                    <p class="content-3">Headsets & hands-free devices</p>
+                    <p class="content-3">Apple iPhone accessories</p>
+                    <p class="content-3">Samsung Galaxy accessories</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">iPhone configurator</p>
+                    <p class="content-3">Apple Watch configurator</p>
+                    <p class="content-3">Samsung Galaxy Watch configurator</p>
+                    <p class="content-3">Samsung Galaxy smartphone configurator</p>
+                    <p class="content-3">Smartphone offers & tariffs</p>
+                    <p class="content-3">OUTLET% smartphone & accessories</p>
+                    <p class="content-3">Rent mobile phones</p>
+                    <p class="content-3">Mobile credit cards</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-6" class="cont-categ-spec">
+
+        <div class="offers-title">Large Household Appliances</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Washing</div>
+                <div class="column-content">
+                    <p class="content-3">Washing machines</p>
+                    <p class="content-3">Top-loading washing machines</p>
+                </div>
+
+                <div class="column-title">Drying</div>
+                <div class="column-content">
+                    <p class="content-3">Dryer</p>
+                    <p class="content-3">Heat pump dryer</p>
+                    <p class="content-3">Washer dryer</p>
+                </div>
+
+                <div class="column-title">Cooling and freezing</div>
+                <div class="column-content">
+                    <p class="content-3">Fridge-freezer combinations</p>
+                    <p class="content-3">Refrigerators</p>
+                    <p class="content-3">Built-in refrigerators</p>
+                    <p class="content-3">Freezers</p>
+                    <p class="content-3">Chest freezers</p>
+                    <p class="content-3">Side-by-side refrigerators</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Dishwasher</div>
+                <div class="column-content">
+                    <p class="content-3">Built-in dishwasher</p>
+                    <p class="content-3">Freestanding dishwasher</p>
+                </div>
+
+                <div class="column-title">Ovens & Stoves</div>
+                <div class="column-content">
+                    <p class="content-3">Built-in ovenss</p>
+                    <p class="content-3">Microwaves</p>
+                    <p class="content-3">Built-in stoves</p>
+                    <p class="content-3">Induction stoves</p>
+                    <p class="content-3">Extractor hoods</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Buying advice</div>
+                <div class="column-content">
+                    <p class="content-3">Washing machines</p>
+                    <p class="content-3">Dryers</p>
+                    <p class="content-3">Refrigerators</p>
+                    <p class="content-3">Freezers</p>
+                    <p class="content-3">Microwaves</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-7" class="cont-categ-spec">
+
+        <div class="offers-title">Household & Living</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Vacuum Cleaners</div>
+                <div class="column-content">
+                    <p class="content-3">Cordless vacuum cleaners</p>
+                    <p class="content-3">Floor vacuum cleaners</p>
+                    <p class="content-3">Robot vacuum cleaners</p>
+                    <p class="content-3">Wet and dry vacuum cleaners</p>
+                    <p class="content-3">Other vacuum cleaners</p>
+                </div>
+
+                <div class="column-title">Coffee & Tea</div>
+                <div class="column-content">
+                    <p class="content-3">Fully automatic coffee machines</p>
+                    <p class="content-3">Capsule machines</p>
+                    <p class="content-3">Coffee machines</p>
+                    <p class="content-3">Kettle</p>
+                    <p class="content-3">Other products</p>
+                </div>
+
+                <div class="column-title">Ironing and sewing</div>
+                <div class="column-content">
+                    <p class="content-3">Steam irons</p>
+                    <p class="content-3">Steam ironing stations</p>
+                    <p class="content-3">Sewing machines</p>
+                    <p class="content-3">Ironing boards</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Small kitchen appliances</div>
+                <div class="column-content">
+                    <p class="content-3">Food processors</p>
+                    <p class="content-3">Mixing & chopping</p>
+                    <p class="content-3">Toasters</p>
+                    <p class="content-3">Deep fryers</p>
+                    <p class="content-3">Other small kitchen appliances</p>
+                </div>
+
+                <div class="column-title">Heating & Air Conditioning</div>
+                <div class="column-content">
+                    <p class="content-3">Heaters</p>
+                    <p class="content-3">Air Conditioning Units</p>
+                    <p class="content-3">Fans</p>
+                    <p class="content-3">Air Conditioning Units</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Household goods</div>
+                <div class="column-content">
+                    <p class="content-3">Kitchen helpers & kitchen utensils</p>
+                    <p class="content-3">Pots</p>
+                    <p class="content-3">Pans</p>
+                    <p class="content-3">More household goods</p>
+                </div>
+
+                <div class="column-title">Living & home technology</div>
+                <div class="column-content">
+                    <p class="content-3">Weather observation</p>
+                    <p class="content-3">Clocks</p>
+                    <p class="content-3">Batteries</p>
+                    <p class="content-3">More home technology</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-8" class="cont-categ-spec">
+
+        <div class="offers-title">Gaming & VR</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">PlayStation</div>
+                <div class="column-content">
+                    <p class="content-3">PlayStation 5 consoles</p>
+                    <p class="content-3">PlayStation 4 games</p>
+                    <p class="content-3">PlayStation 4 controllers</p>
+                    <p class="content-3">PlayStation 5 games</p>
+                    <p class="content-3">PlayStation 5 controllers</p>
+                    <p class="content-3">Other PlayStation products</p>
+                </div>
+
+                <div class="column-title">Nintendo</div>
+                <div class="column-content">
+                    <p class="content-3">Nintendo Switch consoles</p>
+                    <p class="content-3">Nintendo Switch games</p>
+                    <p class="content-3">Nintendo Switch controllers</p>
+                    <p class="content-3">Other Nintendo products</p>
+                </div>
+
+                <div class="column-title">Virtual Reality (VR)</div>
+                <div class="column-content">
+                    <p class="content-3">VR Headsets</p>
+                    <p class="content-3">VR Accessories</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Microsoft Xbox</div>
+                <div class="column-content">
+                    <p class="content-3">Xbox All Access</p>
+                    <p class="content-3">Xbox Series X|S Consoles</p>
+                    <p class="content-3">Xbox Series X Games</p>
+                    <p class="content-3">Xbox Series X|S Controller</p>
+                    <p class="content-3">Xbox One Games</p>
+                    <p class="content-3">Xbox One Controller</p>
+                    <p class="content-3">Other Xbox products</p>
+                    <p class="content-3">Xbox gift cards</p>
+                </div>
+
+                <div class="column-title">PC Gaming and Gaming Accessories</div>
+                <div class="column-content">
+                    <p class="content-3">Gaming Notebooks</p>
+                    <p class="content-3">Gaming PCs</p>
+                    <p class="content-3">Gaming Monitors</p>
+                    <p class="content-3">Gaming Headsets</p>
+                    <p class="content-3">Gaming Chairs</p>
+                    <p class="content-3">Gaming Mice</p>
+                    <p class="content-3">Gaming Keyboards</p>
+                    <p class="content-3">PC Games</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Theme worlds</div>
+                <div class="column-content">
+                    <p class="content-3">PlayStation 5</p>
+                    <p class="content-3">Xbox Series X|S</p>
+                </div>
+
+                <div class="column-title">Other Categories</div>
+                <div class="column-content">
+                    <p class="content-3">Fan articles</p>
+                    <p class="content-3">Gaming credit cards</p>
+                    <p class="content-3">Games novelties</p>
+                    <p class="content-3">Accessories & communication</p>
+                    <p class="content-3">Offers Gaming & VR</p>
+                    <p class="content-3">OUTLET% Gaming & VR</p>
+                    <p class="content-3">Rent consoles & VR glasses</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-9" class="cont-categ-spec">
+
+        <div class="offers-title">Photo & Drones</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Cameras</div>
+                <div class="column-content">
+                    <p class="content-3">System cameras</p>
+                    <p class="content-3">SLR cameras</p>
+                    <p class="content-3">Digital cameras</p>
+                    <p class="content-3">Instant cameras</p>
+                    <p class="content-3">Dashcams</p>
+                    <p class="content-3">Other cameras</p>
+                </div>
+
+                <div class="column-title">Lenses & flash units</div>
+                <div class="column-content">
+                    <p class="content-3">Zoom lenses</p>
+                    <p class="content-3">Fixed focal length lenses</p>
+                    <p class="content-3">Telephoto zoom lenses</p>
+                    <p class="content-3">System camera lenses</p>
+                    <p class="content-3">Ring flashes & flash units</p>
+                    <p class="content-3">Other lenses</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Drones & drone spare parts</div>
+                <div class="column-content">
+                    <p class="content-3">Video & photo drones</p>
+                    <p class="content-3">Drone accessories & spare parts</p>
+                    <p class="content-3">Fun & toy drones</p>
+                </div>
+
+                <div class="column-title">Action & Outdoor</div>
+                <div class="column-content">
+                    <p class="content-3">Action Cam</p>
+                    <p class="content-3">Action Cam Accessories</p>
+                </div>
+
+                <div class="column-title">Photo & camera tripods</div>
+                <div class="column-content">
+                    <p class="content-3">Tripods</p>
+                    <p class="content-3">Gimbal</p>
+                    <p class="content-3">Other tripods</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Photo accessories</div>
+                <div class="column-content">
+                    <p class="content-3">Analog film & video cassettes</p>
+                    <p class="content-3">Microphones</p>
+                    <p class="content-3">Camera batteries</p>
+                    <p class="content-3">Other accessories</p>
+                </div>
+
+                <div class="column-title">Memory cards</div>
+                <div class="column-content">
+                    <p class="content-3">SD/SDHC memory cards</p>
+                    <p class="content-3">Micro SDHC memory cards</p>
+                    <p class="content-3">Other memory cards</p>
+                </div>
+
+                <div class="column-title">Other Categories</div>
+                <div class="column-content">
+                    <p class="content-3">Binoculars & microscopes</p>
+                    <p class="content-3">Picture frames & albums</p>
+                    <p class="content-3">Photo service & picture printing</p>
+                    <p class="content-3">OUTLET% Photo & drones</p>
+                    <p class="content-3">Rent drones & cameras</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-10" class="cont-categ-spec">
+
+        <div class="offers-title">Health & Personal Care</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Razors & Hair Removal</div>
+                <div class="column-content">
+                    <p class="content-3">Men's Razors</p>
+                    <p class="content-3">Women's Razors & Hair Removal</p>
+                    <p class="content-3">Hair Clippers</p>
+                    <p class="content-3">Replacement Blades & Razor Accessories</p>
+                </div>
+
+                <div class="column-title">Hair styling & hair dryers</div>
+                <div class="column-content">
+                    <p class="content-3">Hair dryers</p>
+                    <p class="content-3">Curling irons</p>
+                    <p class="content-3">Straightening irons</p>
+                    <p class="content-3">Hot air & styling brushes</p>
+                    <p class="content-3">Other hair styling products</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Oral and dental care</div>
+                <div class="column-content">
+                    <p class="content-3">Electric toothbrushes</p>
+                    <p class="content-3">Oral irrigators</p>
+                    <p class="content-3">Oral care center</p> 
+                    <p class="content-3">Dental care accessories</p> 
+                </div>
+
+                <div class="column-title">Wellness & Beauty</div>
+                <div class="column-content">
+                    <p class="content-3">Massage devices</p>
+                    <p class="content-3">Cosmetic products</p>
+                    <p class="content-3">Manicure & pedicure</p>
+                    <p class="content-3">Heating pads & electric blankets</p>
+                    <p class="content-3">Foot baths and air bubble mats</p>
+                </div>
+
+                <div class="column-title">Health devices</div>
+                <div class="column-content">
+                    <p class="content-3">Body scales</p>
+                    <p class="content-3">Blood pressure monitors</p>
+                    <p class="content-3">Thermometers</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Sleep and relaxation</div>
+                <div class="column-content">
+                    <p class="content-3">Analogue & digital alarm clocks</p>
+                    <p class="content-3">Sleep aids for babies & children</p>
+                    <p class="content-3">Sleep aids for adults</p>
+                    <p class="content-3">Indoor climate in the bedroom</p>
+                    <p class="content-3">Other products from sleep & relaxation</p>
+                </div>
+
+                <div class="column-title">Other Categories</div>
+                <div class="column-content">
+                    <p class="content-3">Men's razor buying guide</p>
+                    <p class="content-3">Offers Health and personal care</p>
+                    <p class="content-3">OUTLET% Health and personal care</p>
+                    <p class="content-3">Medical supplies</p>
+                    <p class="content-3">Mobility aids</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-11" class="cont-categ-spec">
+
+        <div class="offers-title">Film & Music</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Music and audio books</div>
+                <div class="column-content">
+                    <p class="content-3">Vinyl/LP</p>
+                    <p class="content-3">Rock & Pop CDs</p>
+                    <p class="content-3">Hip Hop & R&B CDs</p>
+                    <p class="content-3">Hard Rock & Metal CDs</p>
+                    <p class="content-3">Pop & Folk Music CDs</p>
+                    <p class="content-3">Dance & Electro CDs</p>
+                    <p class="content-3">Music DVD & Blu-ray</p>
+                    <p class="content-3">Audio books & comedy</p>
+                    <p class="content-3">Other music & audio books</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Films & series</div>
+                <div class="column-content">
+                    <p class="content-3">4K Ultra HD Blu-ray</p>
+                    <p class="content-3">Film boxes & film specials</p>
+                    <p class="content-3">TV series</p> 
+                    <p class="content-3">Anime films</p> 
+                    <p class="content-3">Erotic films</p> 
+                    <p class="content-3">Horror films</p> 
+                    <p class="content-3">Steelbooks</p> 
+                    <p class="content-3">Adventure & action films</p> 
+                    <p class="content-3">Disney films</p> 
+                    <p class="content-3">FSK 18</p> 
+                    <p class="content-3">Other films & series</p> 
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Other Categories</div>
+                <div class="column-content">
+                    <p class="content-3">Special editions</p>
+                    <p class="content-3">Merchandise</p>
+                    <p class="content-3">Albums of the month</p>
+                    <p class="content-3">Film & Music Gift cards</p>
+                    <p class="content-3">Film & Music offers</p>
+                    <p class="content-3">OUTLET% Film & Music</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-12" class="cont-categ-spec">
+
+        <div class="offers-title">Sports & Leisure</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Smartwatches and fitness trackers</div>
+                <div class="column-content">
+                    <p class="content-3">Smartwatches</p>
+                    <p class="content-3">Fitness trackers</p>
+                    <p class="content-3">Apple Watch</p>
+                    <p class="content-3">Samsung Watch</p>
+                    <p class="content-3">Sports watches</p>
+                    <p class="content-3">Wearables accessories</p>
+                    <p class="content-3">Wearables buying guide</p>
+                    <p class="content-3">Samsung Galaxy Watch configurator</p>
+                    <p class="content-3">Apple Watch configurator</p>
+                </div>
+
+                <div class="column-title">E-bikes</div>
+                <div class="column-content">
+                    <p class="content-3">Pedelec</p>
+                    <p class="content-3">Bicycle accessories</p>
+                    <p class="content-3">Electric scooters</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Hoverboards & E-Scooters</div>
+                <div class="column-content">
+                    <p class="content-3">E-Scooters</p>
+                    <p class="content-3">Hoverboards</p>
+                    <p class="content-3">E-Scooters & Hoverboard Accessories</p> 
+                    <p class="content-3">Balance Scooter</p>
+                </div>
+
+                <div class="column-title">Fitness equipment for home</div>
+                <div class="column-content">
+                    <p class="content-3">Home exercise bikes & ergometers</p>
+                    <p class="content-3">Treadmills</p>
+                    <p class="content-3">Cross trainers</p> 
+                    <p class="content-3">Fitness accessories</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Navigation devices</div>
+                <div class="column-content">
+                    <p class="content-3">Car & truck navigation</p>
+                    <p class="content-3">Navigation accessories</p>
+                    <p class="content-3">Other navigation devices</p>
+                </div>
+
+                <div class="column-title">Sports equipment</div>
+                <div class="column-content">
+                    <p class="content-3">Sports clothing</p>
+                    <p class="content-3">Sports equipment</p>
+                </div>
+
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">Radios & Walkie-Talkies</p>
+                    <p class="content-3">Travel accessories</p>
+                    <p class="content-3">Offers Sports & Leisure</p>
+                    <p class="content-3">OUTLET% Sports & Leisure</p>
+                    <p class="content-3">Rent an e-scooter</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-13" class="cont-categ-spec">
+
+        <div class="offers-title">Smart Home</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Smart Home Cameras</div>
+                <div class="column-content">
+                    <p class="content-3">Smart Indoor cameras</p>
+                    <p class="content-3">Smart Outdoor Cameras</p>
+                </div>
+
+                <div class="column-title">Smart lighting</div>
+                <div class="column-content">
+                    <p class="content-3">Ceiling lighting</p>
+                    <p class="content-3">Smart lamps</p>
+                    <p class="content-3">Smart light bulbs</p>
+                    <p class="content-3">Light strips / light stripes</p>
+                    <p class="content-3">Outdoor lighting</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Smart Home basic equipment</div>
+                <div class="column-content">
+                    <p class="content-3">Starter kits</p>
+                    <p class="content-3">Smart home accessories</p>
+                    <p class="content-3">Smart sockets & plugs</p>
+                    <p class="content-3">Smart light switches</p>
+                    <p class="content-3">Smart home thermostats</p>
+                    <p class="content-3">Other basic equipment</p>
+                </div>
+
+                <div class="column-title">Smart home burglary protection</div>
+                <div class="column-content">
+                    <p class="content-3">Smart door locks</p>
+                    <p class="content-3">Smart motion detectors</p>
+                    <p class="content-3">Smart window & door sensors</p> 
+                    <p class="content-3">Other burglary protection</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Smart security</div>
+                <div class="column-content">
+                    <p class="content-3">Smart smoke detectors</p>
+                    <p class="content-3">Smart water detectors</p>
+                </div>
+
+                <div class="column-title">Smart home comfort</div>
+                <div class="column-content">
+                    <p class="content-3">Smart roller shutter control</p>
+                    <p class="content-3">Smart remote controls</p>
+                    <p class="content-3">Smart weather station</p>
+                </div>
+
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">Smart Home Offers</p>
+                    <p class="content-3">OUTLET% Smart Home</p>
+                    <p class="content-3">Rent a Smart Home</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-14" class="cont-categ-spec">
+
+        <div class="offers-title">DIY & Garden</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Grills & grill accessories</div>
+                <div class="column-content">
+                    <p class="content-3">Electric grill</p>
+                    <p class="content-3">Gas grill</p>
+                    <p class="content-3">Table grill</p>
+                    <p class="content-3">Panini grill & contact grill</p>
+                    <p class="content-3">Charcoal grill</p>
+                    <p class="content-3">Grill accessories</p>
+                </div>
+
+                <div class="column-title">Garden care</div>
+                <div class="column-content">
+                    <p class="content-3">Lawn care</p>
+                    <p class="content-3">Tree and shrub care</p>
+                    <p class="content-3">Bed and soil cultivation</p>
+                    <p class="content-3">Irrigation</p>
+                    <p class="content-3">Garden care accessories</p>
+                </div>
+
+                <div class="column-title">DIY</div>
+                <div class="column-content">
+                    <p class="content-3">Power tools</p>
+                    <p class="content-3">Hand tools</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Building, terrace & street cleaning</div>
+                <div class="column-content">
+                    <p class="content-3">High-pressure cleaners</p>
+                    <p class="content-3">Steam cleaners</p>
+                    <p class="content-3">Sweepers & snow blowers</p>
+                    <p class="content-3">Accessories for building, terrace & street cleaning</p>
+                </div>
+
+                <div class="column-title">Car supplies</div>
+                <div class="column-content">
+                    <p class="content-3">E-car charging stations</p>
+                    <p class="content-3">Workshop accessories</p>
+                    <p class="content-3">Battery chargers</p> 
+                    <p class="content-3">Car care</p>
+                    <p class="content-3">Other car supplies</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">Decoration & Party</p>
+                    <p class="content-3">Outdoor lights</p>
+                    <p class="content-3">Heaters & patio heaters</p>
+                    <p class="content-3">Pet supplies</p>
+                    <p class="content-3">Renewable energies</p>
+                    <p class="content-3">Offers DIY & Garden</p>
+                    <p class="content-3">OUTLET% DIY & Garden</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-15" class="cont-categ-spec">
+
+        <div class="offers-title">Toys & Baby</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">LEGO® World</div>
+                <div class="column-content">
+                    <p class="content-3">LEGO® Technic</p>
+                    <p class="content-3">LEGO® Super Mario</p>
+                    <p class="content-3">LEGO® Star Wars™</p>
+                    <p class="content-3">LEGO® Marvel Super Heroes™</p>
+                    <p class="content-3">Other products from LEGO®</p>
+                </div>
+
+                <div class="column-title">Baby world</div>
+                <div class="column-content">
+                    <p class="content-3">Baby monitor</p>
+                    <p class="content-3">Pregnancy accessories</p>
+                    <p class="content-3">Other baby products</p>
+                </div>
+
+                <div class="column-title">Board games & children's games</div>
+                <div class="column-content">
+                    <p class="content-3">Family games</p>
+                    <p class="content-3">Board games</p>
+                    <p class="content-3">Card games</p>
+                    <p class="content-3">Other games</p>
+                </div>
+
+                <div class="column-title">Toy vehicles, airplanes and ships</div>
+                <div class="column-content">
+                    <p class="content-3">Toy cars</p>
+                    <p class="content-3">Remote-controlled vehicles</p>
+                    <p class="content-3">Card games</p>
+                    <p class="content-3">Other vehicles</p>
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Educational toys & experiments</div>
+                <div class="column-content">
+                    <p class="content-3">Game & learning computers</p>
+                    <p class="content-3">Tiptoi</p>
+                    <p class="content-3">Puzzles</p>
+                    <p class="content-3">Other educational toys</p>
+                </div>
+
+                <div class="column-title">Children's Vehicles</div>
+                <div class="column-content">
+                    <p class="content-3">Children's Electric Vehicles</p>
+                    <p class="content-3">Bobby Cars & Ride-On Cars</p>
+                    <p class="content-3">Other Children's Vehicles</p>
+                </div>
+
+                <div class="column-title">Action & outdoor toys</div>
+                <div class="column-content">
+                    <p class="content-3">Water toys</p>
+                    <p class="content-3">Garden toys</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title">Other categories</div>
+                <div class="column-content">
+                    <p class="content-3">Play worlds & collectible figures</p>
+                    <p class="content-3">Cuddly toys & teddy bears</p>
+                    <p class="content-3">Construction kits and construction toys</p>
+                    <p class="content-3">Dolls & doll accessories</p>
+                    <p class="content-3">Model building</p>
+                    <p class="content-3">Offers Toys & Baby</p>
+                    <p class="content-3">OUTLET% Toys & Baby</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-16" class="cont-categ-spec">
+
+        <div class="offers-title">Renewable Energy</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title">Solar systems</div>
+                <div class="column-content">
+                    <p class="content-3">Balcony solar systems</p>
+                    <p class="content-3">Mobile solar systems</p>
+                    <p class="content-3">Solar systems for houses</p>
+                </div>
+
+            </div>
+
+            <div class="column-2">
+                <div class="column-title">Solar devices</div>
+                <div class="column-content">
+                    <p class="content-3">Solar lights</p>
+                    <p class="content-3">Solar chargers</p>
+                </div>
+
+                <div class="column-title">Heating (renewable energies)</div>
+                <div class="column-content">
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                </div>
+
+                <div class="column-title">Obtain an offer for a PV system</div>
+                <div class="column-content">
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="column-title"></div>
+                <div class="column-content">
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="hover-content-17" class="cont-categ-spec">
+
+        <div class="offers-title">Refurbished</div>
+        
+        <div class="decoration-line"></div>
+
+        <div class="three-column-cont">
+            <div class="column-1">
+                <div class="column-title"></div>
+                <div class="column-content">
+                    <p class="content-3">Handys</p>
+                    <p class="content-3">Laptops</p>
+                    <p class="content-3">Tablets</p>
+                    <p class="content-3">iPhones</p>
+                    <p class="content-3">iPads</p>
+                    <p class="content-3">Apple Watch</p>
+                </div>
+
+            </div>
+
+            <div class="column-2">
+                <div class="column-title"></div>
+                <div class="column-content">
+                    <p class="content-3">Macbooks</p>
+                    <p class="content-3">Headphones</p>
+                    <p class="content-3">Washing machines</p>
+                    <p class="content-3">Refrigerators</p>
+                    <p class="content-3">Freezers</p>
+                    <p class="content-3">Dishwashers</p>
+                    <p class="content-3">Appliances</p>
+                </div>
+
+            </div>
+
+            <div class="column-3">
+                <div class="column-title"></div>
+                <div class="column-content">
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                    <p class="content-3"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="show-login" class="login-container">
+
+        <div id="hide-login" class="exit-part-x" onclick="closeSignIn()"><svg width="15px" viewBox="0 0 80 80" role="presentation" data-test="modal-close-button"><path d="m76.875 12.25-29 29 29 29-7.375 7.375-29-29-29 29-7.375-7.375 29-29-29-29L11.5 4.875l29 29 29-29z"></path></svg></div>
+        
+        <div class="login-btn">
+            <button id="login-show-cont" class="login-CTA" onclick="openCurrentLogin()">Login</button>
+        </div>
+        
+        <div class="register-btn">
+            <button id="register-CTA" class="register-CTA" onclick="openRegistrationForm()">Register</button>
+        </div>
+
+        <div class="register-media">
+            <div class="arrow-right-part"><svg width="15" height="32" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.9638 4q-.2698 0-.4867.1253a.96.96 0 0 0-.347.3422q-.1302.2168-.1301.4867 0 .3856.2891.6747L13.8048 12l-6.5157 6.371q-.289.2893-.2891.6748 0 .2795.13.4915a.97.97 0 0 0 .347.3374Q7.6941 20 7.9639 20q.3953 0 .665-.2795l7.1712-7.0072q.1639-.1543.2361-.3326A1 1 0 0 0 16.1084 12q0-.2024-.0723-.3807t-.2361-.3326L8.6289 4.2795Q8.3589 4 7.9639 4"></path></svg></div>
+            <div class="register-media-text-part">Register with myMediaMarkt ID</div>
+        </div>
+
+        <div class="account-overview">
+            <div class="icon-login-part"><svg width="15" height="24" viewBox="0 0 24 24" role="presentation"><g fill-rule="evenodd" transform="translate(2 3)"><path fill-rule="nonzero" d="M9.594.086a1 1 0 0 1 .7-.042l.112.042 9 4a1 1 0 0 1 .586.784L20 5v12a1 1 0 0 1-1.993.117L18 17V5.65l-8-3.554L2 5.65V17a1 1 0 0 1-.883.993L1 18a1 1 0 0 1-.993-.883L0 17V5a1 1 0 0 1 .478-.853l.116-.06 9-4z"></path><path fill-rule="nonzero" d="M10 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6m0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path><rect width="2" height="2" x="9" y="8" fill-rule="nonzero" rx="1"></rect><path fill-rule="nonzero" d="M11 13c1.636 0 2.91 1.291 2.995 2.861l.005.17v1.06c0 .502-.448.909-1 .909-.513 0-.936-.35-.993-.803L12 17.09v-1.06c0-.655-.426-1.148-.904-1.207L11 14.818H9c-.483 0-.94.452-.994 1.084L8 16.03v1.06c0 .503-.448.91-1 .91-.513 0-.936-.35-.993-.803L6 17.09v-1.06c0-1.59 1.217-2.935 2.826-3.026L9 13z"></path><path d="M7 14h6v4H7z"></path></g></svg></div>
+            <div class="account-overview-text-part">Account overview</div>
+        </div>
+
+        <div class="my-purchases">
+            <div class="icon-purchases-part"><svg width="15" height="24" viewBox="0 0 24 24" role="presentation"><path fill-rule="evenodd" d="M8.16 19a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M4.34 2a1 1 0 0 1 .955.703l.028.116L5.724 5H22l-1.46 8.665a4 4 0 0 1-3.744 3.33l-.2.005H9.108a4 4 0 0 1-3.907-3.141l-.038-.198L3.545 4h-.957l-.643-2zm15.295 5H6.075l1.062 6.33a2 2 0 0 0 1.81 1.664L9.11 15h7.486a2 2 0 0 0 1.94-1.51l.033-.158L19.634 7z"></path></svg></div>
+            <div class="purchases-text-part">My purchases</div>
+        </div>
+
+        <div class="my-wish-list">
+            <div class="icon-wish-list-part"><svg width="15" height="32" viewBox="0 0 24 24"><path d="M16.5 3A6.36 6.36 0 0 0 12 5.07 6.36 6.36 0 0 0 7.5 3 5.5 5.5 0 0 0 2 8.5c0 3.92 4.75 8.25 7 10.5l2.28 2.28a.75.75 0 0 0 .53.22h.38a.75.75 0 0 0 .53-.22L15 19c2.25-2.25 7-6.58 7-10.5A5.5 5.5 0 0 0 16.5 3m-2.3 14L12 19.17 9.8 17C7.77 15 4 11.26 4 8.5A3.5 3.5 0 0 1 7.5 5a5 5 0 0 1 3.71 2.21.77.77 0 0 0 .6.29h.45a.51.51 0 0 0 .4-.2A5.11 5.11 0 0 1 16.47 5 3.5 3.5 0 0 1 20 8.5c0 2.76-3.77 6.5-5.8 8.5"></path></svg></div>
+            <div class="wish-list-text-part">My wish list</div>
+        </div>
+            
+    </div>
+
+
+    <div id="current-customer" class="customer-container">
+        <div class="x-part">
+            <div id="back-to-signin-page" class="x-title-part" onclick="closeCurrentLogin()"> <span id="sign-left"> &lt;</span> Back </div>
+            <div id="hide-current" class="x-icon" onclick="closeCurrentLogin()"><svg width="10px" viewBox="0 0 80 80" role="presentation" data-test="modal-close-button"><path d="m76.875 12.25-29 29 29 29-7.375 7.375-29-29-29 29-7.375-7.375 29-29-29-29L11.5 4.875l29 29 29-29z"></path></svg></div>
+        </div>
+
+        <div class="customer-title">Already a customer?</div>
+
+        <div class="customer-subtitle">Log in now to enjoy all the benefits of the myMediaMarkt customer account.</div>
+
+        <div class="email-input-part">
+            <input class="email-input" type="email" placeholder="email address">
+        </div>
+
+        <div class="password-input-part">    
+        <input class="password-input" type="password" placeholder="password">
+        <img class="eye-icon" width="15px" src="images/eye-password-hide-svgrepo-com.svg" alt="">
+        <img class="eye-icon-show" width="15px" src="images/eye-view-interface-symbol-svgrepo-com.svg" alt="">
+        <div class="forgot-password-part">Forgot your password?</div>
+        </div>
+
+        
+
+        <div class="log-in-btn">
+            <button class="log-in-CTA" onclick="goToMyProfile()">Login</button>
+        </div>
+
+        <div class="pre-register-title">Don't have an account yet?</div>
+
+        <div class="register-btn-part">
+            <div class="register-text">
+                <button class="register-now-CTA" onclick="goToRegister()"> &gt; Register Now</button>
+            </div>
+        </div>
+
+        <div class="my-media-pretext">Do you have a myMediaMarkt Card registered in the store?</div>
+
+        <div class="mymedia-register-part">
+            <button class="mymedia-id-text"> &gt; Register with myMediaMarkt ID</button>
+        </div>
+
+    </div>
+
+    <div id="show-registration-container" class="registration-container">
+        
+        <div class="register-part-header">
+            <div id="back-to-main" class="back-to-main" onclick="backToMainLogin()"> &lt; Back</div>
+            <div id="register-close" class="register-close" onclick="closeRegister()"><svg width="10px" viewBox="0 0 80 80" role="presentation" data-test="modal-close-button"><path d="m76.875 12.25-29 29 29 29-7.375 7.375-29-29-29 29-7.375-7.375 29-29-29-29L11.5 4.875l29 29 29-29z"></path></svg></div>
+        </div>
+
+        <div class="register-title">New Customer?</div>
+
+        <div class="circle-btns-part">
+            <div class="circle-one">
+                <div id="number-1" class="circle-number-part">1</div>
+                <div class="email-text-part">Enter email</div>
+            </div>
+
+            <div class="decorative-line"></div>
+        
+            <div class="circle-two">
+                <div id="number-2" class="circle-number-part">2</div>
+                <div class="email-text-part">Verify email</div>
+            </div>
+
+            <div class="decorative-line"></div>
+        
+            <div class="circle-three">
+                <div id="number-3" class="circle-number-part">3</div>
+                <div class="email-text-part">Personalize data</div>
+            </div>
+        </div>
+            
+        <div class="register-email-text">Enter your email address below: We'll send you a 6-digit code to verify it and secure your account.</div>
+
+        <div class="register-email-input">
+            <input class="email-input-part" type="email" placeholder="email address">
+        </div>
+
+        <div class="next-btn-part">
+            <button id="next-verification" class="next-CTA" onclick="toVerificationCont()">Next</button>
+        </div>
+
+        <div class="online-text-part">Do you already have an online account?</div>
+
+        <div class="login-btn-part">
+            <button class="login-here-CTA" onclick="goToLogin()"> &gt; Login Here</button>
+        </div>
+
+        <div class="card-text-part">Do you have a myMediaMarkt card registered in the store?</div>
+
+        <div class="register-id-btn-part">
+            <button class="id-register-CTA"> &gt; Register with myMediaMarkt ID</button>
+        </div>
+        
+    </div>
+
+    <div class="verification-container">
+        
+        <div class="register-part-header">
+            <div class="back-to-main"> &lt; Back</div>
+            <div class="register-close"><svg width="10px" viewBox="0 0 80 80" role="presentation" data-test="modal-close-button"><path d="m76.875 12.25-29 29 29 29-7.375 7.375-29-29-29 29-7.375-7.375 29-29-29-29L11.5 4.875l29 29 29-29z"></path></svg></div>
+        </div>
+
+        <div class="register-title">New Customer?</div>
+
+        <div class="circle-btns-part">
+            <div class="circle-one">
+                <div id="number-one" id="number-1" class="circle-number-part">1</div>
+                <div class="email-text-part">Enter email</div>
+            </div>
+
+            <div class="decorative-line"></div>
+        
+            <div class="circle-two">
+                <div id="number-two" id="number-2" class="circle-number-part">2</div>
+                <div class="email-text-part">Verify email</div>
+            </div>
+
+            <div class="decorative-line"></div>
+        
+            <div class="circle-three">
+                <div id="number-three" id="number-3" class="circle-number-part">3</div>
+                <div class="email-text-part">Personalize data</div>
+            </div>
+        </div>
+            
+        <div class="register-email-text">Please check your mailbox now! Enter the 6-digit verification code that was sent to your email address. The code expires after 60 minutes.</div>
+
+        <div class="change-email-text">Change email address.</div>
+
+        <div class="code-input-part">
+            <input class="code-input" type="text" maxlength="1" pattern="[0-9]">
+            <input class="code-input" type="text" maxlength="1" pattern="[0-9]">
+            <input class="code-input" type="text" maxlength="1" pattern="[0-9]">
+            <input class="code-input" type="text" maxlength="1" pattern="[0-9]">
+            <input class="code-input" type="text" maxlength="1" pattern="[0-9]">
+            <input class="code-input" type="text" maxlength="1" pattern="[0-9]">
+        </div>
+
+        <div class="change-email-text">Send a new code</div>
+
+        <div class="next-btn-part">
+            <button id="send-code-CTA" class="next-CTA" onclick="goToDataContainer()">Send</button>
+        </div>
+        
+    </div>
+
+    <div class="data-container">
+        
+        <div class="register-part-header">
+            <div class="back-to-main"> &lt; Back</div>
+            <div class="register-close"><svg width="10px" viewBox="0 0 80 80" role="presentation" data-test="modal-close-button"><path d="m76.875 12.25-29 29 29 29-7.375 7.375-29-29-29 29-7.375-7.375 29-29-29-29L11.5 4.875l29 29 29-29z"></path></svg></div>
+        </div>
+
+        <div class="register-title">New Customer?</div>
+
+        <div class="circle-btns-part">
+            <div class="circle-one">
+                <div id="number-1-one" id="number-one" id="number-1" class="circle-number-part">1</div>
+                <div class="email-text-part">Enter email</div>
+            </div>
+
+            <div class="decorative-line"></div>
+        
+            <div class="circle-two">
+                <div id="number-2-two" id="number-two" id="number-2" class="circle-number-part">2</div>
+                <div class="email-text-part">Verify email</div>
+            </div>
+
+            <div class="decorative-line"></div>
+        
+            <div class="circle-three">
+                <div id="number-3-three" id="number-three" id="number-3" class="circle-number-part">3</div>
+                <div class="email-text-part">Personalize data</div>
+            </div>
+        </div>
+            
+        
+        <div class="personal-data-part">
+            <input class="data-input" type="text" placeholder="First name">
+            <input class="data-input" type="text" placeholder="Last name">
+        </div>
+
+        <div class="birthday-important">You must be of legal age to register.</div>
+
+        <div class="birthrday-part">
+            <label class="birthday-important" for="">Date of birth</label>
+            <input type="date" class="data-input">
+        </div>
+
+        <div class="password-part">
+            <div class="password-input-enter">
+                <input type="password" class="password-enter" placeholder="Enter password">
+                <img class="password-img-1" src="images/eye-password-hide-svgrepo-com.svg" alt="">
+            </div>
+
+            <div class="password-input-repeat">
+                <input type="password" class="password-repeat" placeholder="Repeat password">
+                <img class="password-img-2" src="images/eye-password-hide-svgrepo-com.svg" alt="">
+            </div>
+        </div>
+
+        <div class="terms-and-conditions">
+            <div class="terms-part">
+                <input class="check-box" type="checkbox">
+                <div class="terms-text">Yes, I would like to receive exclusive offers and information tailored to my interests as well as surveys by email.</div>
+            </div>
+
+            <div class="terms-part">
+                <input class="check-box" type="checkbox">
+                <div class="terms-text">Yes, I am interested in advertising tailored to my interests on advertising partner sites (“advertising partner consent”).</div>
+            </div>
+        </div>
+
+        <div class="accept-terms-text">By clicking on the “Register now” button, you accept the
+            terms and conditions of participation of the myMediaMarkt program
+            including a personalized profile. Please note the
+            myMediaMarkt data protection information</div>
+
+        <div class="next-btn-part">
+            <button id="register-now-CTA" class="next-CTA" onclick="goToSuccessCont()">Register Now</button>
+        </div>
+        
+    </div>
+
+    <div class="registration-success-container">
+        <div class="green-part">
+            <img class="green-checked-img" src="images/green-check-mark-icon-in-a-circle-tick-vector-46695091.jpg" alt="" class="img-green-checked">
+            <p class="success-text">SUCCESS</p>
+        </div>
+
+        <div class="white-part">
+            <p class="congrats-text">Congratulations. Your account has been successfully created.</p>
+            <button class="green-CTA" onclick="goToMyProfile()">Continue to your profile</button>
+        </div>
+    </div>
+
+    <div class="customer-container-final">
+        
+        <div class="customer-name-part">
+            <div class="header-exit-part">
+                <div class="empty-div"></div>
+                <div class="right-x-part" onclick="goToLoginFirst()">&#x2715;</div>
+            </div>
+            <div class="customer-name">John White</div>
+            <div class="customer-id-logo">
+                <div class="customer-logo"><svg width="20" height="16" viewBox="0 0 20 16" role="presentation"><g fill="none" fill-rule="evenodd"><path d="M0-2h20v20H0z"></path><path fill="#000" fill-rule="nonzero" d="M18.333.5C19.253.5 20 1.246 20 2.167v11.666c0 .92-.746 1.667-1.667 1.667H1.667C.747 15.5 0 14.754 0 13.833V2.167C0 1.247.746.5 1.667.5zm0 1.667H1.667v11.666h16.666z"></path><path fill="#000" fill-rule="nonzero" d="m14.772 4.667-.936.002a.24.24 0 0 0-.175.08c-.025.031-2.171 2.655-3.04 3.672.211-1.088.646-3.466.65-3.49a.2.2 0 0 0-.046-.178.23.23 0 0 0-.177-.078l-.908.004a.24.24 0 0 0-.172.076l-5.746 6.223a.2.2 0 0 0-.035.225c.04.08.12.13.207.13l1.158-.004c.07 0 .134-.029.175-.076.032-.034 2.804-2.984 3.781-4.041l-.137.75c-.174.96-.391 2.155-.609 3.103a.2.2 0 0 0 .046.175c.044.05.11.08.177.08l.89-.002a.23.23 0 0 0 .172-.078l.005-.006c.026-.034 2.268-2.902 3.16-3.994-.05.266-.104.583-.163.928-.154.9-.347 2.018-.566 2.885a.2.2 0 0 0 .043.178c.042.05.11.08.178.08l.862-.003a.226.226 0 0 0 .221-.169l1.208-6.214a.2.2 0 0 0-.043-.178.24.24 0 0 0-.18-.08"></path></g></svg></div>
+                <div class="customer-id">myMediaMarkt ID</div>
+            </div>
+        </div>
+
+        <div class="customer-body-part">
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill-rule="evenodd" transform="translate(2 3)"><path fill-rule="nonzero" d="M9.594.086a1 1 0 0 1 .7-.042l.112.042 9 4a1 1 0 0 1 .586.784L20 5v12a1 1 0 0 1-1.993.117L18 17V5.65l-8-3.554L2 5.65V17a1 1 0 0 1-.883.993L1 18a1 1 0 0 1-.993-.883L0 17V5a1 1 0 0 1 .478-.853l.116-.06 9-4z"></path><path fill-rule="nonzero" d="M10 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6m0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path><rect width="2" height="2" x="9" y="8" fill-rule="nonzero" rx="1"></rect><path fill-rule="nonzero" d="M11 13c1.636 0 2.91 1.291 2.995 2.861l.005.17v1.06c0 .502-.448.909-1 .909-.513 0-.936-.35-.993-.803L12 17.09v-1.06c0-.655-.426-1.148-.904-1.207L11 14.818H9c-.483 0-.94.452-.994 1.084L8 16.03v1.06c0 .503-.448.91-1 .91-.513 0-.936-.35-.993-.803L6 17.09v-1.06c0-1.59 1.217-2.935 2.826-3.026L9 13z"></path><path d="M7 14h6v4H7z"></path></g></svg></div>
+                <div class="cus-text-part">Account overview</div>
+            </div>
+
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path fill-rule="evenodd" d="M8.16 19a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M4.34 2a1 1 0 0 1 .955.703l.028.116L5.724 5H22l-1.46 8.665a4 4 0 0 1-3.744 3.33l-.2.005H9.108a4 4 0 0 1-3.907-3.141l-.038-.198L3.545 4h-.957l-.643-2zm15.295 5H6.075l1.062 6.33a2 2 0 0 0 1.81 1.664L9.11 15h7.486a2 2 0 0 0 1.94-1.51l.033-.158L19.634 7z"></path></svg></div>
+                <div class="cus-text-part">My purchases</div>
+            </div>
+
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M16.5 3A6.36 6.36 0 0 0 12 5.07 6.36 6.36 0 0 0 7.5 3 5.5 5.5 0 0 0 2 8.5c0 3.92 4.75 8.25 7 10.5l2.28 2.28a.75.75 0 0 0 .53.22h.38a.75.75 0 0 0 .53-.22L15 19c2.25-2.25 7-6.58 7-10.5A5.5 5.5 0 0 0 16.5 3m-2.3 14L12 19.17 9.8 17C7.77 15 4 11.26 4 8.5A3.5 3.5 0 0 1 7.5 5a5 5 0 0 1 3.71 2.21.77.77 0 0 0 .6.29h.45a.51.51 0 0 0 .4-.2A5.11 5.11 0 0 1 16.47 5 3.5 3.5 0 0 1 20 8.5c0 2.76-3.77 6.5-5.8 8.5"></path></svg></div>
+                <div class="cus-text-part">My wish list</div>
+            </div>
+
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" role="presentation"><path fill="#000" fill-rule="evenodd" d="M6.19 7.985H9v2H4a1 1 0 0 1-.993-.883L3 8.985v-5h2v2.272a9.101 9.101 0 0 1 15.949 4.321l.041.27-1.98.275A7.1 7.1 0 0 0 6.19 7.985m-1.2 4.863a7.1 7.1 0 0 0 12.82 3.137H15v-2h5a1 1 0 0 1 .993.884l.007.117v5h-2v-2.272a9.101 9.101 0 0 1-15.949-4.321l-.041-.27z" clip-rule="evenodd"></path></svg></div>
+                <div class="cus-text-part">My subscriptions</div>
+            </div>
+
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path fill-rule="evenodd" d="M5 20a3 3 0 0 1-3-3v-4h1a1 1 0 1 0 0-2H2V7a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v4h-1a1 1 0 0 0 0 2h1v4a3 3 0 0 1-3 3zm9-14H5a1 1 0 0 0-1 1v2.17l.193.077a3 3 0 0 1 1.802 2.577L6 12c0 1.302-.83 2.41-1.988 2.825L4 14.83V17a1 1 0 0 0 .883.993L5 18h9v-2h2v2h3a1 1 0 0 0 .993-.883L20 17v-2.171l-.193-.076a3 3 0 0 1-1.802-2.577L18 12c0-1.302.83-2.41 1.988-2.825L20 9.17V7a1 1 0 0 0-.883-.993L19 6h-3v2h-2zm2 4v4h-2v-4z"></path></svg></div>
+                <div class="cus-text-part">My coupons</div>
+            </div>
+
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path fill-rule="evenodd" d="M11.5 3c5.906.01 10.5 4.05 10.5 9.02-.01 4.522-3.958 9.111-10.5 8.98-8.205-.049-9.417-3.605-9.5-9 .042-1.366.183-9.054 9.5-9m.1 2c-7.454-.042-7.566 5.937-7.6 7 .041 2.596.428 4.645 2.273 5.839L8.355 7.372q.408-.04 1.031-.068a92 92 0 0 1 3.64-.088q1.79 0 2.53.74.739.739.739 2.102a8 8 0 0 1-.039.807q-.02.204-.049.448l-.068.574a13 13 0 0 1-.428 1.936 5.1 5.1 0 0 1-.759 1.547 3.44 3.44 0 0 1-1.236 1.042q-.75.38-1.858.437l-1.732.078-.352 1.977q.831.087 1.826.094c5.234.102 8.392-3.467 8.4-6.984C20 8.15 16.325 5.008 11.6 5m.57 5.155q-.195 0-.468.029-.272.03-.35.049l-.681 3.756.603-.04q.272-.018.467-.077a.8.8 0 0 0 .35-.214 1.3 1.3 0 0 0 .273-.467q.117-.312.214-.818.135-.68.185-1.148.048-.467.068-1.031a4 4 0 0 0-.312-.03 6 6 0 0 0-.35-.01z"></path></svg></div>
+                <div class="cus-text-part">My points</div>
+            </div>
+
+            <div class="customer-section-part">
+                <div class="cus-icon-part"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path fill-rule="evenodd" d="m19.55 19.799.206.201-1.414 1.414a9 9 0 0 0-12.537-.185l-.19.185L4.2 20c4.228-4.228 11.04-4.295 15.35-.201M12 2.5a6 6 0 1 1 0 12 6 6 0 0 1 0-12m0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8"></path></svg></div>
+                <div class="cus-text-part">My profile</div>
+            </div>
+        </div>
+
+        <div class="customer-footer-part">
+            <button class="logout-CTA" onclick="goToLoginFirst()"><svg width="24" height="32" viewBox="0 0 24 24"><path d="m20.78 11.28-5.14-5.13a.5.5 0 0 0-.71 0l-.71.71a.49.49 0 0 0 0 .7L17.67 11H7.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10.17l-3.45 3.44a.5.5 0 0 0 0 .71l.71.7a.5.5 0 0 0 .71 0l5.14-5.13a.75.75 0 0 0 .22-.53v-.38a.77.77 0 0 0-.22-.53M10.5 19H5V5h5.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5"></path></svg>Logout</button>
+        </div>
+            
+    </div>
+
+    <div class="opacity-container"></div>
+    
+<script src="script.js"></script>    
+
+
+
+
+    
+</body>
+</html>
